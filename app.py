@@ -6,7 +6,7 @@ import json
 import streamlit as st
 
 st.set_page_config(page_title="OpenRouter API", page_icon=":guardsman:", layout="wide")
-st.title("My personnaly assistant to raports creating")
+st.title("Mój osobisty Chatbot ")
 
 load_dotenv()
 
@@ -58,7 +58,7 @@ def generate_response(prompt):
     return (completion.choices[0].message.content)
 
 
-prompt=st.text_input("Enter your prompt here")
+prompt=st.text_input("Wprowadż swoje zapytanie tutaj ")
 if st.button("Generuj odpowiedź"):
     response = generate_response(prompt)
     st.write(response)
